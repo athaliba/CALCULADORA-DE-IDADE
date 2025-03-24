@@ -1,0 +1,131 @@
+.idade-container {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 1.5rem 1.5rem 8rem 1.5rem;
+    max-width: 600px;
+    margin: 4rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  form {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid hsl(0, 0%, 86%);
+    padding-bottom: 2.5rem;
+  }
+  
+  .inputs {
+    display: flex;
+    gap: 1.5rem;
+    flex: 1;
+  }
+  
+  .campo {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+  
+  .campo label {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .campo input {
+    padding: 0.75rem;
+    font-size: 1.5rem;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .campo input:focus {
+    outline: 1px solid hsl(259, 100%, 65%);
+  }
+  
+  .campo.erro input {
+    border-color: hsl(0, 100%, 67%);
+  }
+  
+  .campo small {
+    color: hsl(0, 100%, 67%);
+    font-size: 0.65rem;
+    margin-top: 0.25rem;
+  }
+  
+  .botao-calcular {
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .botao-calcular:hover {
+    background-color: black;
+  }
+  
+  .botao-calcular img {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .resultado {
+    margin-top: 2rem;
+  }
+  
+  .resultado h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.2;
+  }
+  
+  .resultado h2 span {
+    color: hsl(259, 100%, 65%);
+    margin-right: 0.5rem;
+    font-style: italic;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .idade-container {
+      padding: 2rem 1.5rem;
+      border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+    }
+  
+    .inputs {
+      gap: 1rem;
+    }
+  
+    .campo {
+      width: 100%;
+    }
+  
+    form {
+      flex-direction: column;
+    }
+  
+    .botao-calcular {
+      position: absolute;
+      left: 50%;
+      bottom: -32px;
+      transform: translateX(-50%);
+    }
+  
+    .resultado h2 {
+      font-size: 2.5rem;
+    }
+  }
+  
