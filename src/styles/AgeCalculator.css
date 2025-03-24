@@ -98,34 +98,50 @@
     font-style: italic;
   }
   
-  /* Responsivo */
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .idade-container {
       padding: 2rem 1.5rem;
       border-radius: 1.5rem 1.5rem 6rem 1.5rem;
-    }
-  
-    .inputs {
-      gap: 1rem;
-    }
-  
-    .campo {
-      width: 100%;
+      margin: 2rem 1rem;
     }
   
     form {
       flex-direction: column;
+      padding-bottom: 4.5rem; /* espaço pro botão */
+      position: relative;
+    }
+  
+    .inputs {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.5rem;
+    }
+  
+    .campo {
+      flex: 1;
+    }
+  
+    .campo input {
+      font-size: 1.25rem;
     }
   
     .botao-calcular {
       position: absolute;
-      left: 50%;
       bottom: -32px;
+      left: 50%;
       transform: translateX(-50%);
+      z-index: 5;
+      width: 64px;
+      height: 64px;
+    }
+  
+    .resultado {
+      margin-top: 3.5rem;
+      text-align: left;
     }
   
     .resultado h2 {
       font-size: 2.5rem;
     }
   }
-  
