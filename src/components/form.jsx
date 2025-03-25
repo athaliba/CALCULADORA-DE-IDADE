@@ -15,6 +15,8 @@ const Form = ({ onSubmit, dataNascimento, setDataNascimento, erros }) => {
             type="number"
             name="dia"
             value={dataNascimento.dia}
+            min="1"
+            max="31"
             onChange={handleChange}
             placeholder="DD"
           />
@@ -26,6 +28,8 @@ const Form = ({ onSubmit, dataNascimento, setDataNascimento, erros }) => {
             type="number"
             name="mes"
             value={dataNascimento.mes}
+            min="1"
+            max="12"
             onChange={handleChange}
             placeholder="MM"
           />
@@ -37,6 +41,7 @@ const Form = ({ onSubmit, dataNascimento, setDataNascimento, erros }) => {
             type="number"
             name="ano"
             value={dataNascimento.ano}
+            min="1900"
             onChange={handleChange}
             placeholder="AAAA"
           />
