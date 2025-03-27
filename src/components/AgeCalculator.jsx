@@ -63,6 +63,17 @@ const AgeCalculator = () => {
     let meses = hoje.getMonth() - nascimento.getMonth()
     let dias = hoje.getDate() - nascimento.getDate()
 
+    if (dias < 0) {
+      meses--
+      const mesAnterior = new Date(hoje.getFullYear(), hoje.getMonth(), 0)
+      dias += mesAnterior.getDate()
+    }
+    
+    if (meses < 0) {
+      anos--
+      meses += 12
+    }
+
     // Ajustar mês e dia se necessário
     if (dias < 0) {
       meses--
